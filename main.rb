@@ -1,4 +1,4 @@
-def buble_sort_by(arr)
+def bubble_sort_by(arr)
   res = arr.clone
   com = -> (i) { res[i], res[i+1] = res[i+1], res[i] }
   i = res.size - 1
@@ -17,6 +17,6 @@ def buble_sort_by(arr)
   return res
 end
 
-sorted = buble_sort_by(["hi","hello","hey"]) { |l, r| l.size - r.size }
+sorted = bubble_sort_by(["hi","hello","hey"]) { |l, r| l.size - r.size }
 
 puts sorted
