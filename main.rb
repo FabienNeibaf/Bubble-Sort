@@ -1,20 +1,19 @@
 def bubble_sort_by(arr)
-  res = arr.clone
-  com = -> (i) { res[i], res[i+1] = res[i+1], res[i] }
-  i = res.size - 1
+  com = -> (i) { arr[i], arr[i+1] = arr[i+1], arr[i] }
+  i = arr.size - 1
   until i == 0
     j = 0
     until j == i
       if block_given?
-        com.call(j) if yield(res[j], res[j+1]) > 0
-      elsif res[j] > res[j+1]
+        com.call(j) if yield(arr[j], arr[j+1]) > 0
+      elsif arr[j] > arr[j+1]
         com.call(j)
       end
       j += 1
     end
     i -= 1
   end
-  return res
+  return arr
 end
 
 arr = ["hi","hello","hey"]
