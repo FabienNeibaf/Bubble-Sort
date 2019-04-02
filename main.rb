@@ -17,6 +17,6 @@ def bubble_sort_by(arr)
   return res
 end
 
-sorted = bubble_sort_by(["hi","hello","hey"]) { |l, r| l.size - r.size }
+sorted = bubble_sort_by(["hi","hello","hey"])
 
 puts sorted
